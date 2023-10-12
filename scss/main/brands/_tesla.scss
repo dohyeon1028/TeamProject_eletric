@@ -1,0 +1,251 @@
+&#tesla {
+	width: 300%;
+	background-color: #000;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: relative;
+	left: 0%;
+	transition: 0.5s;
+	.logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 100%;
+		img {
+			width: 40%;
+			height: 40%;
+			object-fit: contain;
+		}
+	}
+	.teslaTap {
+		position: relative;
+		.inner {
+			width: 1180px;
+			height: 100vh;
+			margin: 0 auto;
+			padding: 100px 0;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			.txtBox {
+				display: flex;
+				justify-content: space-between;
+				h1 {
+					font: bold 36px/1 'arial';
+					color: #fff;
+					height: 50px;
+				}
+				p {
+					font: normal 14px/1 'arial';
+					color: #fff;
+					height: 50px;
+				}
+			}
+			.imgBox {
+				width: 100%;
+				height: 75%;
+				position: relative;
+				.tapmenuImg {
+					&.on {
+						opacity: 1;
+					}
+					opacity: 0;
+					position: absolute;
+					width: 100%;
+					transition: 0.5s;
+				}
+			}
+			> .active_btns {
+				width: 100%;
+				height: 20%;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				padding: 20px;
+				li {
+					position: relative;
+					border-top: 2px solid #aaa;
+					padding-top: 10px;
+					transition: 0.5s;
+					cursor: pointer;
+					display: flex;
+					flex-direction: column;
+					a {
+						font: bold 18px/1 '맑은 고딕';
+						color: #aaa;
+						display: block;
+					}
+					span {
+						font: 16px/1 '맑은 고딕';
+						margin-top: 20px;
+						display: block;
+						color: #aaa;
+					}
+					&.on {
+						border-top: 3px solid #fff;
+						a {
+							color: #fff;
+							display: block;
+						}
+						span {
+							margin-top: 20px;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.tesla2D {
+	overflow: hidden;
+	.teslaList {
+		position: relative;
+		width: 130vw;
+		height: 100vh;
+		transition: 1s;
+		transition-timing-function: cubic-bezier(0.93, -0.12, 0.15, 1.02);
+		z-index: 3;
+		padding: 20px;
+		opacity: 1;
+		transform: scale(1);
+		display: flex;
+		li {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 25vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			transition: 1s;
+			transition-timing-function: cubic-bezier(0.93, -0.12, 0.15, 1.02);
+			img {
+				width: 100%;
+			}
+			h1 {
+				position: absolute;
+				bottom: 30%;
+				left: 10px;
+				font: bold 1.5vw/1 'arial';
+				color: #fff;
+				transition: 0.5s 0.5s;
+				margin-left: 50px;
+				transition: none;
+			}
+			&:nth-of-type(1) {
+				width: 45vw;
+				left: 0;
+				h1 {
+					bottom: 20%;
+				}
+				&.left {
+					left: 30%;
+				}
+				&.right {
+					right: 30%;
+				}
+			}
+			&:nth-of-type(2) {
+				left: 3vw;
+				transition-delay: 0.1s;
+			}
+			&:nth-of-type(3) {
+				left: 6vw;
+				transition-delay: 0.2s;
+			}
+			&:nth-of-type(4) {
+				left: 9vw;
+				transition-delay: 0.3s;
+			}
+		}
+	}
+	.teslaNav {
+		position: absolute;
+		right: 10%;
+		bottom: 15%;
+		z-index: 3;
+		display: inline-flex;
+		gap: 40px;
+		padding-left: 20px;
+		.teslaPrev,
+		.teslaNext {
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			border: 1px solid #bbb;
+			cursor: pointer;
+			position: relative;
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				width: 17px;
+				height: 2px;
+				background-color: #fff;
+				position: absolute;
+			}
+			&::before {
+				bottom: 49%;
+				transform: rotate(45deg) translateX(0px);
+			}
+			&::after {
+				top: 49%;
+				transform: rotate(-45deg) translateX(0px);
+			}
+			span {
+				width: 20px;
+				height: 2px;
+				background-color: #fff;
+				position: absolute;
+				top: 49%;
+				opacity: 1;
+			}
+		}
+		.teslaPrev {
+			&::before,
+			&::after {
+				left: 25px;
+				transform-origin: left center;
+			}
+			span {
+				left: 25px;
+			}
+		}
+		.teslaNext {
+			&::before,
+			&::after {
+				right: 25px;
+				transform-origin: right center;
+			}
+			span {
+				right: 25px;
+			}
+		}
+	}
+}
+> .btns {
+	position: absolute;
+	right: 5%;
+	bottom: 5%;
+	display: flex;
+	gap: 30px;
+	cursor: pointer;
+	li {
+		width: 50px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		i {
+			font-size: 40px;
+			color: #fff;
+		}
+	}
+	&.on {
+		position: fixed;
+	}
+}

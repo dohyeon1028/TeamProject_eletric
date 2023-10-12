@@ -1,0 +1,87 @@
+main {
+	width: 100%;
+	height: 500vh;
+	overflow: hidden;
+	section {
+		height: 20%;
+		background-color: #555;
+		border: 1px solid #000;
+		article {
+			width: 100vw;
+			height: 100%;
+			background-color: #000;
+		}
+		&.footer {
+			background-image: url(../img/tesla/footer.webp);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+			h2 {
+				position: absolute;
+				top: 12%;
+				left: 50%;
+				transform: translateX(-50%);
+				font: 40px/1 'Roboto';
+			}
+			.shop {
+				position: absolute;
+				bottom: 20%;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 300px;
+				height: 40px;
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 5px;
+				font: 14px/1 '맑은 고딕';
+				color: #555;
+				cursor: pointer;
+				transition: 0.2s;
+				&:hover {
+					background-color: #000;
+					color: beige;
+				}
+			}
+			.footerList {
+				position: absolute;
+				bottom: 15%;
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				gap: 20px;
+				li {
+					color: #ccc;
+					font: bold 12px/1 'Roboto';
+					cursor: pointer;
+					&.Eng {
+						font-family: 'airal';
+					}
+				}
+			}
+			p {
+				width: 30%;
+				position: absolute;
+				bottom: 5%;
+				left: 50%;
+				transform: translateX(-50%);
+				color: #ccc;
+				word-break: break-all;
+				text-align: center;
+				a {
+					color: #eee;
+				}
+			}
+		}
+		.mainVideo {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@import './brands/tesla';
+		@import './brands/chevrolet';
+		@import './brands/ford';
+	}
+}

@@ -1,0 +1,63 @@
+header{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    padding:  0 30px;
+    z-index: 3;
+
+    display: flex;
+    justify-content: space-between;
+    h2{
+        width: 10%;
+        height: 100%;
+        a{
+            height: 100%;
+            &.mobile_logo{
+                opacity: 0;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &.online_logo{
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: brightness(1.5);
+                }
+            }
+        }
+    }
+    #gnb{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20%;
+        li{
+            font: bold 16px/1 "맑은 고딕";
+            color: #fff;
+        }
+    }
+    #util{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 8%;
+        li{
+            width: 30px;
+            height: 30px;
+            color: #fff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+}
